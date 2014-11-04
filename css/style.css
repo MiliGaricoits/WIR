@@ -1,0 +1,79 @@
+
+/***********************************************************************************************/
+/* BASIC AND NAVIGATION                                                                        */
+/***********************************************************************************************/
+
+@font-face {
+	font-family: 'GothamLight';
+	src: url('../assets/fonts/Gotham/light/GothamLight.eot');
+	src: local('GothamLight'), url('../assets/fonts/Gotham/light/GothamLight.woff') format('woff'), url('../assets/fonts/Gotham/light/GothamLight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../assets/fonts/Gotham/bold/GothamBold.eot');
+	src: local('GothamBold'), url('../assets/fonts/Gotham/bold/GothamBold.woff') format('woff'), url('../assets/fonts/Gotham/bold/GothamBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'gillSans';
+    src: url('../assets/fonts/Gill Sans C.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pnova';
+    src: url('../assets/fonts/Mark Simonson - Proxima Nova Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	background-color: #F2F2F2;
+	overflow: auto;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-size: 1em;
+	font-family: gillSans;
+	font-weight: normal;
+	overflow: hidden;
+	z-index: -1;
+	margin: 0;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+h1{
+	text-align: center;
+	font: inherit;
+	font-size: 3em;
+}
+
+center{
+	position: absolute;
+	width: 100%;
+	top: 25%;
+}
+
+#fbLoginButton{
+	font: inherit;
+	border: 2px solid #333;
+	background-color: #FFF;
+	padding: 1%;
+	font-size: 2em;
+	border-radius: 2px;
+	cursor: pointer;
+
+	-webkit-transition: 1s ease;
+	-moz-transition: 1s ease;
+	-o-transition: 1s ease;
+	-ms-transition: 1s ease;
+	transition: 1s ease;  	
+}
+
+#fbLoginButton:hover{
+	background-color: #333;
+	color: #FFF;
+}
