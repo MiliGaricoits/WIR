@@ -1,5 +1,8 @@
 
 
+
+server = 'localhost:15000/';
+
 $(document).ready(function(){
 
 	$('#fbLoginButton').click(function(){
@@ -27,7 +30,21 @@ $(document).ready(function(){
 
 					container.append('</br>');
 					console.log(response);
+/*
+					$.ajax({
+                        type : "POST",
+                        url: "http://"+server+"saveUserData",
+                        data: "nombre="+generacion.nombre+"&idFacebook="+peliculas,
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json'
+                    }).done(function(response){
 
+
+                    }).fail(function(jqXHR, textStatus){
+
+
+					};
+*/
 				});
 
 			} 
