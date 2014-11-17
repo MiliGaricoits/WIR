@@ -11,40 +11,50 @@ $(document).ready(function(){
 
 			if (response.status === 'connected') {
 
+				var idFacebook = response.authResponse.userID;
+				var userName;
 				// the user is logged in and has authenticated your
 				// app, and response.authResponse supplies
 				// the user's ID, a valid access token, a signed
 				// request, and the time the access token 
 
-				FB.api('/me/movies', function(response) {
+				FB.api('/me', function(user) {
+				
+					userName = 'lala';
 
-					var container = $('center');
+					FB.api('/me/movies', function(peliculas) {
 
-					container.append('</br>');
-					container.append('</br>');
+						var container = $('center');
 
-					for (var i = 0; i<response.data.length; i++){
 						container.append('</br>');
-						container.append(response.data[i].name);
-					};
+						container.append('</br>');
 
-					container.append('</br>');
-					console.log(response);
-/*
-					$.ajax({
-                        type : "POST",
-                        url: "http://"+server+"saveUserData",
-                        data: "nombre="+generacion.nombre+"&idFacebook="+peliculas,
-                        contentType: 'application/x-www-form-urlencoded',
-                        dataType: 'json'
-                    }).done(function(response){
+						for (var i = 0; i<peliculas.data.length; i++){
+							container.append('</br>');
+							container.append(peliculas.data[i].name);
+						};
 
+						container.append('</br>');
+						console.log(peliculas);
+	
+						$.ajax({
+	                        type : "POST",
+	                        url: "http://"+server+"saveUserData",
+	                        data: "nombre="+userName+"&idFacebook="+idFacebook+"&peliculas="+peliculas.data,
+	                        contentType: 'application/x-www-form-urlencoded',
+	                        dataType: 'json'
+	                    }).done(function(response){
 
-                    }).fail(function(jqXHR, textStatus){
+	                    	console.log('done');
 
+	                    }).fail(function(jqXHR, textStatus){
 
-					};
-*/
+	                    	console.log('fail');
+
+						};
+	
+					});
+
 				});
 
 			} 
@@ -54,20 +64,42 @@ $(document).ready(function(){
 				
 				FB.login(function(){
 
-					FB.api('/me/movies', function(response) {
+					FB.api('/me', function(user) {
+				
+						userName = 'lala';
 
-						var container = $('center');
+						FB.api('/me/movies', function(peliculas) {
 
-						container.append('</br>');
-						container.append('</br>');
+							var container = $('center');
 
-						for (var i = 0; i<response.data.length; i++){
 							container.append('</br>');
-							container.append(response.data[i].name);
-						};
+							container.append('</br>');
 
-						container.append('</br>');
-						console.log(response);
+							for (var i = 0; i<peliculas.data.length; i++){
+								container.append('</br>');
+								container.append(peliculas.data[i].name);
+							};
+
+							container.append('</br>');
+							console.log(peliculas);
+		
+							$.ajax({
+		                        type : "POST",
+		                        url: "http://"+server+"saveUserData",
+		                        data: "nombre="+userName+"&idFacebook="+idFacebook+"&peliculas="+peliculas.data,
+		                        contentType: 'application/x-www-form-urlencoded',
+		                        dataType: 'json'
+		                    }).done(function(response){
+
+		                    	console.log('done');
+
+		                    }).fail(function(jqXHR, textStatus){
+
+		                    	console.log('fail');
+
+							};
+		
+						});
 
 					});
 
