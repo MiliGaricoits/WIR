@@ -31,15 +31,12 @@
 
 body{
 	background-color: #F2F2F2;
-	overflow: auto;
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	font-size: 1em;
+	overflow-x: hidden;
 	font-family: gillSans;
 	font-weight: normal;
-	overflow: hidden;
-	z-index: -1;
 	margin: 0;
 
 	-webkit-font-smoothing: antialiased;
@@ -89,9 +86,14 @@ header h1 {
 }
 
 footer {
-	width: 100%;
-	margin-top: calc(100% - 40px);
+	text-align: center;
+	width: 1170px;
+  	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
+
 
 #wrapper {
 	height: calc(100% - 120px);
@@ -140,28 +142,20 @@ nav ul li a:hover {
 /********** HOME ***********/
 /***************************/
 
-#movie_selected {
-	width: 400px;
-	height: 250px;
-	float: left;
+.col-lg-2, .col-lg-4 {
+	padding-bottom: 15px;
 }
 
-#movie_selected #img_movie {
-	height: 250px;
-	width: 200px;
-	float: left;
-}
-
-#movie_selected #dsc_movie {
-	height: 250px;
-	width: 200px;
-	float: right;
-}
-
-.img_peli > li > img {
-	height: 150px;
-	width: 100px;
+.img_peli > img{
+	width: 100%;
 	display: inline;
+	margin-bottom: 25px;
+}
+
+.img_peli_principal > img{
+	width: 100%;
+	display: inline;
+	margin-bottom: 15px;
 }
 
 
