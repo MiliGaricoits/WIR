@@ -2,6 +2,7 @@
 var pelis = [
 	{
 		id: "0", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie0.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -10,6 +11,7 @@ var pelis = [
 	},
 	{
 		id: "1", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie1.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -18,6 +20,7 @@ var pelis = [
 	},
 	{
 		id: "2", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie2.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -26,6 +29,7 @@ var pelis = [
 	},
 	{
 		id: "3", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie3.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -34,6 +38,7 @@ var pelis = [
 	},
 	{
 		id: "1", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie1.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -42,6 +47,7 @@ var pelis = [
 	},
 	{
 		id: "2", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie2.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -50,6 +56,7 @@ var pelis = [
 	},
 	{
 		id: "3", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie3.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -58,6 +65,7 @@ var pelis = [
 	},
 	{
 		id: "1", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie1.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -66,6 +74,7 @@ var pelis = [
 	},
 	{
 		id: "2", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie2.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -74,6 +83,7 @@ var pelis = [
 	},
 	{
 		id: "3", 
+		titulo: "Titulo",
 		poster: "../assets/movies/movie3.jpg", 
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -121,11 +131,13 @@ function _cargarContenidoPeliculas(peliculas)
 	});
 	var like_ppl = $('<input type="hidden" class="rating" readonly data-filled="glyphicon glyphicon-heart" data-empty="glyphicon glyphicon-heart-empty" data-stop="1"/>').attr('value', pelis[0].like);
 	//var long_desc_ppl = $('<p id="desc_ppl"></p>').text(peliculas[0].descripcionPelicula);
+	var titulo_ppl = $('<h3 id="titulo_ppl"></h3>').text(peliculas[0].titulo);
 	var long_desc_ppl = $('<p id="desc_ppl"></p>').text(peliculas[0].description_long);
 
 	img_ppl.appendTo(peli_ppl);
 	rating_ppl.appendTo(peli_ppl);
 	like_ppl.appendTo(peli_ppl);
+	titulo_ppl.appendTo(peli_ppl);
 	long_desc_ppl.appendTo(peli_ppl);
 	peli_ppl.appendTo($("#movies_list"));
 
@@ -152,6 +164,7 @@ function _cargarContenidoPeliculas(peliculas)
 	$(".col-lg-2").click(function(){
 		var peli_id = $(this).attr('id');
 		$('#img_ppl').css('background-image', 'url('+ pelis[peli_id].poster +')');
+		$('#titulo_ppl').text(pelis[peli_id].titulo);
 		$('#desc_ppl').text(pelis[peli_id].description_long);
 	})
 }
