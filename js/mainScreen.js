@@ -2,6 +2,8 @@
 
 
 server = 'localhost:15000/';
+var globales = Globales.getInstance();
+globales.setServer(server);
 
 $(document).ready(function(){
 
@@ -17,6 +19,8 @@ $(document).ready(function(){
 				// app, and response.authResponse supplies
 				// the user's ID, a valid access token, a signed
 				// request, and the time the access token 
+
+				globales.setFacebookID(idFacebook);
 
 				FB.api('/me', function(user) {
 				
@@ -44,8 +48,8 @@ $(document).ready(function(){
 	                        contentType: 'application/x-www-form-urlencoded',
 	                        dataType: 'json'
 	                    }).done(function(response){
-
 	                    	console.log('done');
+	                    	window.location = "file:///Users/miligaricoits/Repository/WIR/WIR/views/home.html";
 
 	                    }).fail(function(jqXHR, textStatus){
 
@@ -92,6 +96,7 @@ $(document).ready(function(){
 		                    }).done(function(response){
 
 		                    	console.log('done');
+		                    	window.location = "file:///Users/miligaricoits/Repository/WIR/WIR/views/home.html";
 
 		                    }).fail(function(jqXHR, textStatus){
 
