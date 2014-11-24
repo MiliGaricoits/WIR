@@ -7,7 +7,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 3,
-		like: true	
+		like: 0	
 	},
 	{
 		id: "1", 
@@ -16,7 +16,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 3,
-		like: true	
+		like: 0	
 	},
 	{
 		id: "2", 
@@ -25,7 +25,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: -1,
-		like: false	
+		like: -1	
 	},
 	{
 		id: "3", 
@@ -34,7 +34,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 1,
-		like: true	
+		like: 0	
 	},
 	{
 		id: "1", 
@@ -43,7 +43,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 3,
-		like: true	
+		like: 0	
 	},
 	{
 		id: "2", 
@@ -52,7 +52,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: -1,
-		like: false	
+		like: -1	
 	},
 	{
 		id: "3", 
@@ -61,7 +61,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 1,
-		like: true	
+		like: 0	
 	},
 	{
 		id: "1", 
@@ -70,7 +70,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 3,
-		like: true	
+		like: 0	
 	},
 	{
 		id: "2", 
@@ -79,7 +79,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: -1,
-		like: false	
+		like: -1	
 	},
 	{
 		id: "3", 
@@ -88,7 +88,7 @@ var pelis = [
 		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
 		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
 		rating: 1,
-		like: true	
+		like: 0	
 	}
 ];
 
@@ -170,6 +170,11 @@ function _cargarContenidoPeliculas(peliculas)
 		$('#img_ppl').css('background-image', 'url('+ pelis[peli_id].poster +')');
 		$('#titulo_ppl').text(pelis[peli_id].titulo);
 		$('#desc_ppl').text(pelis[peli_id].description_long);
+		/*$('#rating_ppl').val(pelis[peli_id].rating);
+		$('#rating_ppl').rating('update');
+		$('#like_ppl').val(pelis[peli_id].like);
+		$('#like_ppl').rating('update');*/
+		$('#rating_ppl').fillUntil(pelis[peli_id].rating);
 	})
 }
 
