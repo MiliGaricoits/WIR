@@ -11,47 +11,48 @@
     <link rel="icon" type="image/jpg" href="">
 
     <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css" />
 
     <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
-
     <script type="text/javascript" src="js/mainScreen.js"></script>
+    <script type="text/javascript" src="js/sdk.js"></script>
+    <script type="text/javascript" src="js/globales.js"></script>
 
   </head>
 
   <body>
+    <div id="wrapper">
+      <div id="fb-root"></div>
 
-    <div id="fb-root"></div>
+      <script>
 
-    <script>
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '295947183948004',
-          xfbml      : true,
-          version    : 'v2.2'
-        });
-      };
-  
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-    </script>
-
-    <h1>Proyecto WIR - Grupo 7</h1>
-
-    <center>
-
-      <button id="fbLoginButton">Comenzar!</button>
-
-    </center>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '295947183948004',
+            xfbml      : true,
+            version    : 'v2.2'
+          });
+        };
     
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+
+      </script>
+
+      <center>
+        <h1>What to Watch</h1>
+        <p>What to Watch es el sitio al que tienes que ir para encontrar lo que te gusta.</p>
+        <p>Nosotros encontraremos la Pelicula pensada para vos!</p>
+        <p>Para comenzar, inicia sesión o logeate con <strong>Facebook</strong>.</p>
+        <button id="fbLoginButton">Comenzar!</button>
+      </center>
+    </div>  
   </body>
 
 </html>

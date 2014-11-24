@@ -1,14 +1,19 @@
 
 
 
-server = 'localhost:15000/';
-var globales = Globales.getInstance();
-globales.setServer(server);
+var server = 'localhost:15000/';
+var globales;
 
 $(document).ready(function(){
 
+	globales = Globales.getInstance();
+	globales.setServer(server);
+
 	$('#fbLoginButton').click(function(){
 
+		globales.setFacebookID("1162593356");
+		window.location = "file:///Users/miligaricoits/Repository/WIR/WIR/views/home.html";
+		
 		FB.getLoginStatus(function(response){
 
 			if (response.status === 'connected') {
@@ -55,7 +60,7 @@ $(document).ready(function(){
 
 	                    	console.log('fail');
 
-						};
+						});
 	
 					});
 
@@ -102,7 +107,7 @@ $(document).ready(function(){
 
 		                    	console.log('fail');
 
-							};
+							});
 		
 						});
 

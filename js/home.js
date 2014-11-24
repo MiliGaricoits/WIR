@@ -102,7 +102,7 @@ $(document).ready(function(){
 	_cargarContenidoPeliculas(pelis);
 	/*$.ajax({
         type : "GET",
-        url: "http://"+server+"getPeliculas?idFacebook=1162593356",//+globales.getFacebookID(),
+        url: "http://"+server+"getPeliculas?idFacebook="+globales.getFacebookID(),
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })
@@ -119,7 +119,7 @@ $(document).ready(function(){
 
 function _cargarContenidoPeliculas(peliculas)
 {
-	var peli_ppl = $('<div class="col-lg-4 img_peli_principal">');
+	/*var peli_ppl = $('<div class="col-lg-4 img_peli_principal">');
 	var img_ppl = $('<div id="img_ppl"></div>').css('background-image', 'url('+ pelis[0].poster +')');
 	var rating_ppl = $('<input type="hidden" class="rating" readonly data-min="1" data-max="5"/>').attr('value', peliculas[0].likesPelicula);
 	rating_ppl.rating({
@@ -139,7 +139,11 @@ function _cargarContenidoPeliculas(peliculas)
 	like_ppl.appendTo(peli_ppl);
 	titulo_ppl.appendTo(peli_ppl);
 	long_desc_ppl.appendTo(peli_ppl);
-	peli_ppl.appendTo($("#movies_list"));
+	peli_ppl.appendTo($("#movies_list"));*/
+
+	$('#img_ppl').css('background-image', 'url('+ pelis[0].poster +')');
+	$('#titulo_ppl').text(peliculas[0].titulo);
+	$('#desc_ppl').text(peliculas[0].description_long);
 
 	var index = 0;
 	peliculas.forEach(function(peli){

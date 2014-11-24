@@ -36,6 +36,7 @@ body{
 	width: 100%;
 	overflow-x: hidden;
 	font-weight: normal;
+	font-family: GothamLight !important;
 	margin: 0;
 
 	-webkit-font-smoothing: antialiased;
@@ -50,18 +51,20 @@ h1{
 center{
 	position: absolute;
 	width: 100%;
-	top: 25%;
+	top: 20%;
 }
 
 #fbLoginButton{
 	font: inherit;
-	border: 2px solid #333;
+	border: 2px solid #fff;
 	background-color: #FFF;
+	color: #333;
 	padding: 1%;
 	font-size: 2em;
 	border-radius: 2px;
 	cursor: pointer;
 	outline: none;
+	margin-top: 25px;
 
 	-webkit-transition: 1s ease;
 	-moz-transition: 1s ease;
@@ -71,7 +74,8 @@ center{
 }
 
 #fbLoginButton:hover{
-	background-color: #333;
+	background-color: #2ebaad;
+	border: 2px solid #2ebaad;
 	color: #FFF;
 }
 
@@ -89,6 +93,7 @@ footer {
 	width: 1170px;
   	padding-right: 15px;
 	padding-left: 15px;
+	padding-bottom: 15px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -104,6 +109,19 @@ footer {
 	background-size: 100% 100%;
 	position: fixed;
 }
+
+/***************/
+/**** INDEX ****/
+/***************/
+
+center p {
+	font-size: 18pt;
+}
+center h1 {
+	font-size: 32pt;
+	margin-bottom: 25px;
+}
+
 
 /**************/
 /**** MENU ****/
@@ -146,6 +164,11 @@ nav ul li a:hover {
 /********** HOME ***********/
 /***************************/
 
+#container {
+
+	padding: 0
+}
+
 #container .col-lg-4 {
 
 	overflow: hidden;
@@ -155,6 +178,7 @@ nav ul li a:hover {
 	border: 3px solid rgba(255,255,255,0.9);
 	padding: 0;
 	height: 732px;
+	width: 32.8% !important;
 	background-color: rgba(255,255,255,0.9);
 	color: #525252;
 
