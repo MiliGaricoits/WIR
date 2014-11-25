@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$('#fbLoginButton').click(function(){
 
 		globales.setFacebookID("1162593356");
-		window.location = "file:///Users/miligaricoits/Repository/WIR/WIR/views/home.html";
+		window.location = "views/home.html";
 		
 		FB.getLoginStatus(function(response){
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
 	                        dataType: 'json'
 	                    }).done(function(response){
 	                    	console.log('done');
-	                    	window.location = "file:///Users/miligaricoits/Repository/WIR/WIR/views/home.html";
+	                    	window.location = "views/home.html";
 
 	                    }).fail(function(jqXHR, textStatus){
 
@@ -101,7 +101,7 @@ $(document).ready(function(){
 		                    }).done(function(response){
 
 		                    	console.log('done');
-		                    	window.location = "file:///Users/miligaricoits/Repository/WIR/WIR/views/home.html";
+		                    	window.location = "views/home.html";
 
 		                    }).fail(function(jqXHR, textStatus){
 

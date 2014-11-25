@@ -99,14 +99,14 @@ $(document).ready(function(){
 	globales.setServer("localhost:15000/");
 	var server = globales.getServer();
 
-	_cargarContenidoPeliculas(pelis);
+	//_cargarContenidoPeliculas(pelis);
 
 	$("#nav_home").attr("class", '');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", 'active');
 	$("#nav_my_movies").attr("class", '');
 	
-	/*$.ajax({
+	$.ajax({
         type : "GET",
         url: "http://"+server+"getPeliculas?idFacebook=1162593356",//+globales.getFacebookID(),
         contentType: 'application/x-www-form-urlencoded',
@@ -119,7 +119,7 @@ $(document).ready(function(){
     .fail(function(jqXHR, textStatus) {
 
     	alert(jqXHR.responseText);
-	});*/
+	});
 
 });
 
