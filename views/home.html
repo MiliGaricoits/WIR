@@ -26,20 +26,12 @@
 
     <body>
         <div id="wrapper">
-            <header>  
-                <h1>What to Watch?</h1>   
-            </header>
-            <div id="menu"> 
-                <nav>  
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Top 10</a></li>
-                        <li><a href="#">Mis Recomendaciones</a></li>
-                        <li><a href="#">Mis Movies</a></li>
-                    </ul>  
-                </nav> 
-            </div> 
+
+            <object class="include" name="header" type="text/html" data="include/header.html"></object>
+
             <div id="container" class="container">
+
+                <object class="include" name="nav" type="text/html" data="include/nav.html"></object>
 
                 <div class="row row-offcanvas row-offcanvas-right">
 
@@ -133,12 +125,8 @@
 
             </div><!--/.container-->
 
+            <object class="include" name="footer" type="text/html" data="include/footer.html"></object>
 
-
-            <footer>  
-                <h4><strong>About us</strong></h4>
-                <p>Grupo 7 | Recuperación de Información y Recuperaciones en la WEB | Fing | UdeLaR | 2014</p>  
-            </footer>   
         </div>
     </body>
 

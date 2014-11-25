@@ -87,9 +87,24 @@ center{
 .include {
 	width: 100%; 
 }
+.include[name="footer"] {
+	height: 100px;
+	overflow: hidden; 
+	position: absolute;
+}
 
-.include.header {
+.include[name="header"] {
 	height: 80px; 
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+.include[name="nav"] {
+	height: 40px; 
+	width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 
 header {
@@ -106,9 +121,9 @@ footer {
 	width: 1170px;
   	padding-right: 15px;
 	padding-left: 15px;
-	padding-bottom: 15px;
-	margin-right: auto;
+	/*padding-bottom: 15px;*/
 	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -140,38 +155,14 @@ center h1 {
 /**** MENU ****/
 /**************/
 
-#menu{
-	height: 40px;
-	width: 100%;
-	margin-bottom: 20px;
-}
-
-nav {  
-    display: block;  
-    margin-bottom: 10px;  
-}  
-nav ul {  
-    list-style: none;  
-    font-size: 14px;  
-}  
-nav ul li {  
-    display: inline;  
-}  
-nav ul li a {  
-    display: block;  
-    float: left;  
-    padding: 3px 6px;  
-    color: #575c7d;  
-    text-decoration: none;  
+.nav-pills > li > a {  
+    color: white;  
     font-weight: bold;  
 }  
-nav ul li a:hover {  
-    background: #deff90;  
-    color: #485e0f;  
-    padding: 3px 6px;  
-    margin: 0;  
-    text-decoration: none;  
+.nav-pills > li > a:hover {   
+    color: #337ab7;  
 } 
+
 
 /***************************/
 /********** HOME ***********/
