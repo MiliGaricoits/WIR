@@ -100,6 +100,12 @@ $(document).ready(function(){
 	var server = globales.getServer();
 
 	_cargarContenidoPeliculas(pelis);
+
+	$("#nav_home").attr("class", 'active');
+	$("#nav_top10").attr("class", '');
+	$("#nav_recommended").attr("class", '');
+	$("#nav_my_movies").attr("class", '');
+
 	/*$.ajax({
         type : "GET",
         url: "http://"+server+"getPeliculas?idFacebook="+globales.getFacebookID(),

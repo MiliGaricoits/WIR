@@ -100,6 +100,11 @@ $(document).ready(function(){
 	var server = globales.getServer();
 
 	_cargarContenidoPeliculas(pelis);
+
+	$("#nav_home").attr("class", '');
+	$("#nav_top10").attr("class", '');
+	$("#nav_recommended").attr("class", 'active');
+	$("#nav_my_movies").attr("class", '');
 	
 	/*$.ajax({
         type : "GET",
