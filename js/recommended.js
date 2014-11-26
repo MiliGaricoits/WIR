@@ -103,7 +103,7 @@ $(document).ready(function(){
 	$("#nav_home").attr("class", '');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", 'active');
-	$("#nav_my_movies").attr("class", '');
+	$("#nav_favorites").attr("class", '');
 	
 	/*$.ajax({
         type : "GET",
@@ -132,7 +132,7 @@ function _cargarRecomendados(recomendados)
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
-		$('#effects').sly('toCenter', 2);
+		$('#effects').sly('toCenter', 1);
 
 		index++;
 	});

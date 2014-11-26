@@ -331,6 +331,24 @@ nav {
 /* RECOMMENDED                                                                                 */
 /***********************************************************************************************/
 
+#effects > ul > li.active:active {
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+#effects > ul > li.active:hover {
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+.recommended{
+	margin: 0 !important;
+	margin-left: 40% !important;
+}
+
 .div_recommended {
 	height: 100%;
 	position: absolute;
@@ -342,6 +360,7 @@ nav {
 	height: 100%;
 	display: inline;
 	left: 0;
+	border: 3px solid rgba(255,255,255,0.9);
 }
 
 .btn {
@@ -362,6 +381,24 @@ nav {
 	-webkit-transform: scale(0.9);
 	transform: scale(0.9);
 }
-.btn:visited{
-	border: none !important;
+
+#div_descrip {
+	width: 35%;
+	background: rgba(0,0,0,0.1);
+	height: 435px;
+	position: absolute;
+	margin-top: 13px;
+	text-align: center;
+	padding: 12px;
 }
+
+#div_descrip h3, #div_descrip div {
+	margin-bottom: 20px;
+}
+#div_descrip h3 {
+	font-size: 26pt;
+}
+#div_descrip p {
+	font-size: 13pt;
+}
+

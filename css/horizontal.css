@@ -100,7 +100,9 @@ body { background: #e8e8e8; }
 
 /* Effects */
 .effects {
-	height: 320px;
+	padding: 20px 0;
+	height: 360px;
+	margin-top: 20px
 	line-height: 200px;
 	-webkit-perspective: 800px;
 	-ms-perspective: 800px;
