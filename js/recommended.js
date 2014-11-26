@@ -132,7 +132,7 @@ function _cargarRecomendados(recomendados)
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
-		$('#effects').sly('toCenter', 3);
+		$('#effects').sly('toCenter', 2);
 
 		index++;
 	});

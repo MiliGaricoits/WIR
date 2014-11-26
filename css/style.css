@@ -344,3 +344,24 @@ nav {
 	left: 0;
 }
 
+.btn {
+	color: white;
+	font-weight: bold;
+	background-color: #2ebaad !important;
+	border-radius: 0 !important;
+
+}
+.btn:hover{
+    color: #333 !important;  
+    background-color: #A7CFCB !important;
+}
+.btn:active{
+	border: none !important;
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+.btn:visited{
+	border: none !important;
+}
