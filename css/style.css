@@ -336,7 +336,7 @@ nav {
 	opacity: 1;
 }
 
-#love_ppl, #hate_ppl{
+.img_peli_principal #love_ppl, .img_peli_principal #hate_ppl{
 	width: 25px;
 	height: auto;
 	float: right;
@@ -375,9 +375,17 @@ nav {
 }
 #div_descrip h3 {
 	font-size: 26pt;
+	margin-top: 25px;
 }
 #div_descrip p {
 	font-size: 13pt;
+}
+#div_descrip #love_ppl, #div_descrip #hate_ppl{
+	width: 25px;
+	height: auto;
+	float: right;
+	margin-right: 3px;
+	margin-left: 3px;
 }
 
 /***********************************************************************************************/
