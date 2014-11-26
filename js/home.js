@@ -1,5 +1,5 @@
 
-var pelis = [
+/*var pelis = [
 	{
 		id: "0", 
 		titulo: "Titulo",
@@ -90,7 +90,7 @@ var pelis = [
 		rating: 1,
 		like: 0	
 	}
-];
+];*/
 
 
 $(document).ready(function(){
@@ -135,9 +135,9 @@ function _cargarContenidoPeliculas(peliculas)
 
 	var index = 0;
 	peliculas.forEach(function(peli){
-		var peli_small = $('<div id="' + index + '" class="col-lg-2 img_peli"></div>');
-		//var img_small = $('<img id="img_ppl">').attr('src', peli.poster);
-		var img_small = $('<img id="img_ppl">').attr('src', peli.urlPelicula);
+		var peli_small = $('<div id="img_peli' + index + '" class="col-lg-2 img_peli"></div>');
+		//var img_small = $('<img id="img_small">').attr('src', peli.poster);
+		var img_small = $('<img id="img_small">').attr('src', peli.urlPelicula);
 		var peli_span = $('<span class="caption scale-caption"></span>');
 		//var peli_title = $('<h3></h3>').text(peli.titulo);
 		var peli_title = $('<h3></h3>').text(peli.nombrePelicula);

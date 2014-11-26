@@ -1,4 +1,4 @@
-var pelis = [
+/*var pelis = [
 	{
 		id: "0", 
 		titulo: "Titulo",
@@ -89,7 +89,7 @@ var pelis = [
 		rating: 1,
 		like: 0	
 	}
-];
+];*/
 
 
 $(document).ready(function(){
@@ -124,17 +124,33 @@ $(document).ready(function(){
 
 function _cargarRecomendados(recomendados)
 {
+	if (recomendados[1])
+	{
+		$('#titulo_recommended').text(recomendados[1].nombrePelicula);
+		$('#desc_recommended').text(recomendados[1].descripcionPelicula);
+	}
+
 	var index = 0;
 	recomendados.forEach(function (peli) {
 
-		var new_item = '<div id="' + index + '" class="div_recommended">';
+		var new_item = '<div id="div_item_carrusel_' + index + '" class="div_item_carrusel">';
 		//new_item += '<img id="img_recommended" src="' + peli.poster + '">';
-		new_item += '<img id="img_recommended" src="' + peli.urlPelicula + '">';
+		new_item += '<img class="img_item_carrusel" src="' + peli.urlPelicula + '">';
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
 		$('#effects').sly('toCenter', 1);
 
+		$('#div_item_carrusel_'+index).data(peli);
+
 		index++;
+	});
+
+	$(".div_item_carrusel").click(function(){
+
+		var peli = $(this).data();
+
+		$('#titulo_recommended').text(peli.nombrePelicula);
+		$('#desc_recommended').text(peli.descripcionPelicula);		
 	});
 }

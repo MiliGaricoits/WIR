@@ -336,6 +336,50 @@ nav {
 /* RECOMMENDED                                                                                 */
 /***********************************************************************************************/
 
+.recommended{
+	margin: 0 !important;
+	margin-left: 520px !important;
+}
+
+#div_descrip {
+	width: 500px;
+	background: rgba(0,0,0,0.1);
+	height: 435px;
+	position: absolute;
+	margin-top: 13px;
+	text-align: center;
+	padding: 12px;
+}
+
+#div_descrip h3, #div_descrip div {
+	margin-bottom: 20px;
+}
+#div_descrip h3 {
+	font-size: 26pt;
+}
+#div_descrip p {
+	font-size: 13pt;
+}
+
+/***********************************************************************************************/
+/* FAVORITES                                                                                   */
+/***********************************************************************************************/
+
+.favorites {
+	height: 300px !important;
+}
+
+.favorites ul li {
+	width: 183px !important;
+}
+.favorites ul li.active {
+	margin: 0 -13px !important;
+}
+
+/***********************************************************************************************/
+/* CARRUSEL                                                                                    */
+/***********************************************************************************************/
+
 #effects > ul > li.active:active {
 	-moz-transform: scale(0.9);
 	-o-transform: scale(0.9);
@@ -349,18 +393,13 @@ nav {
 	transform: scale(1.05);
 }
 
-.recommended{
-	margin: 0 !important;
-	margin-left: 520px !important;
-}
-
-.div_recommended {
+.div_item_carrusel {
 	height: 100%;
 	position: absolute;
 	bottom: 0;
 }
 
-.div_recommended img {
+.div_item_carrusel img {
 	width: 100%;
 	height: 100%;
 	display: inline;
@@ -387,23 +426,5 @@ nav {
 	transform: scale(0.9);
 }
 
-#div_descrip {
-	width: 500px;
-	background: rgba(0,0,0,0.1);
-	height: 435px;
-	position: absolute;
-	margin-top: 13px;
-	text-align: center;
-	padding: 12px;
-}
 
-#div_descrip h3, #div_descrip div {
-	margin-bottom: 20px;
-}
-#div_descrip h3 {
-	font-size: 26pt;
-}
-#div_descrip p {
-	font-size: 13pt;
-}
 
