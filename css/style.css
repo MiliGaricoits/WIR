@@ -272,7 +272,7 @@ nav {
 	width: 383px;
 	height: 520px;
 	/*display: inline;*/
-	margin-bottom: 15px;
+	margin-bottom: 6px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 380px 520px !important; 
@@ -289,6 +289,10 @@ nav {
 	-o-transform: scale(1.4);
 	-webkit-transform: scale(1.4);
 	transform: scale(1.4);
+}
+
+#container .col-lg-4 h3 {
+	margin-top: 31px;
 }
 
 #container .col-lg-2 .scale-caption h3, 
@@ -330,6 +334,21 @@ nav {
 
 #container .col-lg-2:hover .scale-caption  {
 	opacity: 1;
+}
+
+#love_ppl, #hate_ppl{
+	width: 25px;
+	height: auto;
+	float: right;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+#love_ppl:active, #hate_ppl:active{
+	-moz-transform: scale(0.7);
+	-o-transform: scale(0.7);
+	-webkit-transform: scale(0.7);
+	transform: scale(0.7);
 }
 
 /***********************************************************************************************/
