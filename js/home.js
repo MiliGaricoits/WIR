@@ -99,14 +99,14 @@ $(document).ready(function(){
 	globales.setServer("localhost:15000/");
 	var server = globales.getServer();
 
-	_cargarContenidoPeliculas(pelis);
+	//_cargarContenidoPeliculas(pelis);
 
 	$("#nav_home").attr("class", 'active');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", '');
 	$("#nav_favorites").attr("class", '');
 
-	/*$.ajax({
+	$.ajax({
         type : "GET",
         url: "http://"+server+"getPeliculas?idFacebook="+globales.getFacebookID(),
         contentType: 'application/x-www-form-urlencoded',
@@ -119,47 +119,32 @@ $(document).ready(function(){
     .fail(function(jqXHR, textStatus) {
 
     	alert(jqXHR.responseText);
-	});*/
+	});
 
 });
 
 function _cargarContenidoPeliculas(peliculas)
 {
-	/*var peli_ppl = $('<div class="col-lg-4 img_peli_principal">');
-	var img_ppl = $('<div id="img_ppl"></div>').css('background-image', 'url('+ pelis[0].poster +')');
-	var rating_ppl = $('<input type="hidden" class="rating" readonly data-min="1" data-max="5"/>').attr('value', peliculas[0].likesPelicula);
-	rating_ppl.rating({
-		filled: 'glyphicon-star',
-		empty: 'glyphicon-star-empty',
-		start: 0,
-		stop: 10,
-		step: 1
-	});
-	var like_ppl = $('<input type="hidden" class="rating" readonly data-filled="glyphicon glyphicon-heart" data-empty="glyphicon glyphicon-heart-empty" data-stop="1"/>').attr('value', pelis[0].like);
-	//var long_desc_ppl = $('<p id="desc_ppl"></p>').text(peliculas[0].descripcionPelicula);
-	var titulo_ppl = $('<h3 id="titulo_ppl"></h3>').text(peliculas[0].titulo);
-	var long_desc_ppl = $('<p id="desc_ppl"></p>').text(peliculas[0].description_long);
 
-	img_ppl.appendTo(peli_ppl);
-	rating_ppl.appendTo(peli_ppl);
-	like_ppl.appendTo(peli_ppl);
-	titulo_ppl.appendTo(peli_ppl);
-	long_desc_ppl.appendTo(peli_ppl);
-	peli_ppl.appendTo($("#movies_list"));*/
-
-	$('#img_ppl').css('background-image', 'url('+ pelis[0].poster +')');
+	/*$('#img_ppl').css('background-image', 'url('+ peliculas[0].poster +')');
 	$('#titulo_ppl').text(peliculas[0].titulo);
-	$('#desc_ppl').text(peliculas[0].description_long);
+	$('#desc_ppl').text(peliculas[0].description_long);*/
+	$('#img_ppl').css('background-image', 'url('+ peliculas[0].urlPelicula +')');
+	$('#titulo_ppl').text(peliculas[0].nombrePelicula);
+	$('#desc_ppl').text(peliculas[0].descripcionPelicula);
 
 	var index = 0;
 	peliculas.forEach(function(peli){
-		var peli_small = $('<div id="' + index + '" class="col-lg-2 img_peli">');
-		//var img_small = $('<img id="img_ppl">').attr('src', "../assets/movies/movie" + index%3+1 + ".png");
-		var img_small = $('<img id="img_ppl">').attr('src', peli.poster);
+		var peli_small = $('<div id="' + index + '" class="col-lg-2 img_peli"></div>');
+		//var img_small = $('<img id="img_ppl">').attr('src', peli.poster);
+		var img_small = $('<img id="img_ppl">').attr('src', peli.urlPelicula);
 		var peli_span = $('<span class="caption scale-caption"></span>');
-		var peli_title = $('<h3></h3>').text('Titulo');
-		//var peli_desc_short = $('<p></p>').text(peli.descripcionPelicula);
-		var peli_desc_short = $('<p></p>').text(peli.description_short);
+		//var peli_title = $('<h3></h3>').text(peli.titulo);
+		var peli_title = $('<h3></h3>').text(peli.nombrePelicula);
+		var peli_desc_short = $('<p></p>').text(peli.descripcionPelicula);
+		//var peli_desc_short = $('<p></p>').text(peli.description_short);
+
+		peli_small.data(peli);
 	
 		img_small.appendTo(peli_small);
 		peli_title.appendTo(peli_span);
@@ -172,15 +157,17 @@ function _cargarContenidoPeliculas(peliculas)
 	});
 
 	$(".col-lg-2").click(function(){
-		var peli_id = $(this).attr('id');
+		var peli = $(this).data();
+
+		$('#img_ppl').css('background-image', 'url('+ peli.urlPelicula +')');
+		$('#titulo_ppl').text(peli.nombrePelicula);
+		$('#desc_ppl').text(peli.descripcionPelicula);		
+
+		/*var peli_id = $(this).attr('id');
 		$('#img_ppl').css('background-image', 'url('+ pelis[peli_id].poster +')');
 		$('#titulo_ppl').text(pelis[peli_id].titulo);
 		$('#desc_ppl').text(pelis[peli_id].description_long);
-		/*$('#rating_ppl').val(pelis[peli_id].rating);
-		$('#rating_ppl').rating('update');
-		$('#like_ppl').val(pelis[peli_id].like);
-		$('#like_ppl').rating('update');*/
-		$('#rating_ppl').fillUntil(pelis[peli_id].rating);
+		$('#rating_ppl').fillUntil(pelis[peli_id].rating);*/
 	})
 }
 

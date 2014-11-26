@@ -296,6 +296,7 @@ nav {
 	position: relative;
 	left: -200px;
 	width: auto;
+	margin-top: 10px;
 	-webkit-transition: all 300ms ease-out;
 	-moz-transition: all 300ms ease-out;
 	-o-transition: all 300ms ease-out;
