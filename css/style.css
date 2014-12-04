@@ -292,7 +292,12 @@ nav {
 }
 
 #container .col-lg-4 h3 {
-	margin-top: 31px;
+	margin-top: 15px;
+}
+
+#container .col-lg-4 p {
+	padding-right: 3px;
+	padding-left: 3px;
 }
 
 #container .col-lg-2 .scale-caption h3, 
@@ -337,11 +342,7 @@ nav {
 }
 
 .img_peli_principal #love_ppl, .img_peli_principal #hate_ppl{
-	width: 25px;
-	height: auto;
 	float: right;
-	margin-right: 3px;
-	margin-left: 3px;
 }
 
 #love_ppl:active, #hate_ppl:active{
@@ -349,6 +350,14 @@ nav {
 	-o-transform: scale(0.7);
 	-webkit-transform: scale(0.7);
 	transform: scale(0.7);
+}
+
+#likes {
+	text-align: left;
+	width: 80%;
+	margin-right: 10px;
+	padding-left: 3px;
+	display: inline-block;
 }
 
 /***********************************************************************************************/
@@ -381,26 +390,64 @@ nav {
 	font-size: 13pt;
 }
 #div_descrip #love_ppl, #div_descrip #hate_ppl{
-	width: 25px;
-	height: auto;
 	float: right;
-	margin-right: 3px;
-	margin-left: 3px;
 }
 
 /***********************************************************************************************/
-/* FAVORITES                                                                                   */
+/* SEEN                                                                                        */
 /***********************************************************************************************/
 
-.favorites {
+.seen {
 	height: 300px !important;
 }
 
-.favorites ul li {
+.seen ul li {
 	width: 183px !important;
 }
-.favorites ul li.active {
+.seen ul li.active {
 	margin: 0 -13px !important;
+}
+
+#seen_title {
+	text-align: center;
+}
+
+.seen_like {
+	text-align: center;
+}
+
+/***********************************************************************************************/
+/* TOP 10                                                                                      */
+/***********************************************************************************************/
+
+.top10 {
+	height: 300px !important;
+}
+
+.top10 ul li {
+	width: 183px !important;
+}
+.top10 ul li.active {
+	margin: 0 -13px !important;
+}
+
+#top10_title {
+	text-align: center;
+}
+
+.top10_like{
+	text-align: center;
+}
+
+/***********************************************************************************************/
+/* LIKES                                                                                       */
+/***********************************************************************************************/
+
+#love_ppl, #hate_ppl {
+	width: 25px;
+	height: auto;
+	margin-right: 3px;
+	margin-left: 3px;
 }
 
 /***********************************************************************************************/

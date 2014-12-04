@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="UTF-8" />
-        <title>Movieme :: Seen</title>
+        <title>Movieme :: Favorites</title>
         
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="../bootstrap/css/bootstrap-rating.css" />
@@ -21,7 +21,7 @@
         <script type="text/javascript" src="../js/horizontal.js"></script>
         <script type="text/javascript" src="../js/sly.js"></script>
 
-        <script type="text/javascript" src="../js/seen.js"></script>
+        <script type="text/javascript" src="../js/top10.js"></script>
         <script type="text/javascript" src="../js/globales.js"></script>
         <script type="text/javascript" src="../js/auxiliar.js"></script>
 
@@ -38,21 +38,21 @@
                     <nav id="nav">
                         <ul class="nav nav-pills">
                             <li role="presentation" id="nav_home" ><a href="home.html">Movies</a></li>
-                            <li role="presentation" id="nav_top10" ><a href="top10.html">Top 10</a></li>
+                            <li role="presentation" class="active" id="nav_top10" ><a href="top10.html">Top 10</a></li>
                             <li role="presentation" id="nav_recommended" ><a href="recommended.html">Recommended For Me</a></li>
-                            <li role="presentation" class="active" id="nav_seen" ><a href="seen.html">Seen</a></li>
+                            <li role="presentation" id="nav_seen" ><a href="seen.html">Seen</a></li>
                         </ul>
                     </nav>
 
-                    <h3 id="seen_title"></h3>
+                    <h3 id="top10_title"></h3>
 
                     <div class="wrap">
 
-                        <div class="frame effects seen" id="effects">
+                        <div class="frame effects top10" id="effects">
                             <ul id="clearfix" class="clearfix"></ul>
                         </div>
 
-                        <div class="seen_like">
+                        <div class="top10_like">
                             <a href="#"><img id="love_ppl" src="../assets/love.png"></a>
                             <a href="#"><img id="hate_ppl" src="../assets/hate.png"></a>
                         </div>

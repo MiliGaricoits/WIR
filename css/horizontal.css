@@ -4,7 +4,8 @@ body { background: #e8e8e8; }
 /* Example wrapper */
 .wrap {
 	position: relative;
-	margin: 3em 0;
+	margin: 30px 0;
+	margin-top: 10px;
 }
 
 /* Frame */

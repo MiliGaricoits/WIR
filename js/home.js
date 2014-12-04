@@ -101,10 +101,10 @@ $(document).ready(function(){
 
 	//_cargarContenidoPeliculas(pelis);
 
-	$("#nav_home").attr("class", 'active');
+	/*$("#nav_home").attr("class", 'active');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", '');
-	$("#nav_favorites").attr("class", '');
+	$("#nav_favorites").attr("class", '');*/
 
 	$.ajax({
         type : "GET",
@@ -124,13 +124,13 @@ $(document).ready(function(){
 
 function _cargarContenidoPeliculas(peliculas)
 {
-
 	/*$('#img_ppl').css('background-image', 'url('+ peliculas[0].poster +')');
 	$('#titulo_ppl').text(peliculas[0].titulo);
 	$('#desc_ppl').text(peliculas[0].description_long);*/
 	$('#img_ppl').css('background-image', 'url('+ peliculas[0].urlPelicula +')');
 	$('#titulo_ppl').text(peliculas[0].nombrePelicula);
 	$('#desc_ppl').text(peliculas[0].descripcionPelicula);
+	$('#likes').text(peliculas[0].likesPelicula + ' users like this movie');
 
 	var index = 0;
 	peliculas.forEach(function(peli){
@@ -160,7 +160,9 @@ function _cargarContenidoPeliculas(peliculas)
 
 		$('#img_ppl').css('background-image', 'url('+ peli.urlPelicula +')');
 		$('#titulo_ppl').text(peli.nombrePelicula);
-		$('#desc_ppl').text(peli.descripcionPelicula);		
+		$('#desc_ppl').text(peli.descripcionPelicula);	
+		$('#likes').text(peli.likesPelicula + ' users like this movie');
+	
 
 		/*var peli_id = $(this).attr('id');
 		$('#img_ppl').css('background-image', 'url('+ pelis[peli_id].poster +')');

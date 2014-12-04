@@ -18,7 +18,7 @@ $(document).ready(function(){
     })
     .done(function(response) {
     	console.log(response);
-    	_cargarVistas(response.peliculas);
+    	_cargarTop10(response.peliculas);
     })
     .fail(function(jqXHR, textStatus) {
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 });
 
-function _cargarVistas(recomendados)
+function _cargarTop10(recomendados)
 {
 	var index = 0;
 	recomendados.forEach(function (peli) {
@@ -46,12 +46,12 @@ function _cargarVistas(recomendados)
 
 	var active = $('.frame ul li.active').children();
 	active = active.data();
-	$('#seen_title').text(active.nombrePelicula);
+	$('#top10_title').text(active.nombrePelicula);
 
 	$(".div_item_carrusel").click(function(){
 
 		var peli = $(this).data();
 
-		$('#seen_title').text(peli.nombrePelicula);	
+		$('#top10_title').text(peli.nombrePelicula);	
 	});
 }

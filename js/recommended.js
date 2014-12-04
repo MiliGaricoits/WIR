@@ -100,10 +100,10 @@ $(document).ready(function(){
 
 	//_cargarRecomendados(pelis);
 
-	$("#nav_home").attr("class", '');
+	/*$("#nav_home").attr("class", '');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", 'active');
-	$("#nav_favorites").attr("class", '');
+	$("#nav_favorites").attr("class", '');*/
 	
 	$.ajax({
         type : "GET",
@@ -124,11 +124,6 @@ $(document).ready(function(){
 
 function _cargarRecomendados(recomendados)
 {
-	if (recomendados[1])
-	{
-		$('#titulo_recommended').text(recomendados[1].nombrePelicula);
-		$('#desc_recommended').text(recomendados[1].descripcionPelicula);
-	}
 
 	var index = 0;
 	recomendados.forEach(function (peli) {
@@ -146,11 +141,19 @@ function _cargarRecomendados(recomendados)
 		index++;
 	});
 
+	var active = $('.frame ul li.active').children();
+	active = active.data();
+	$('#titulo_recommended').text(active.nombrePelicula);
+	$('#desc_recommended').text(active.descripcionPelicula);
+	$('#likes').text(active.likesPelicula + ' users like this movie');
+
+
 	$(".div_item_carrusel").click(function(){
 
 		var peli = $(this).data();
 
 		$('#titulo_recommended').text(peli.nombrePelicula);
-		$('#desc_recommended').text(peli.descripcionPelicula);		
+		$('#desc_recommended').text(peli.descripcionPelicula);
+		$('#likes').text(peli.likesPelicula + ' users like this movie');		
 	});
 }
