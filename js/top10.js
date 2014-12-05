@@ -12,7 +12,7 @@ $(document).ready(function(){
 	
 	$.ajax({
         type : "GET",
-        url: "http://"+server+"getPeliculas?idFacebook=1162593356",//+globales.getFacebookID(),
+        url: "http://"+server+"getTopTenPeliculas",
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })
