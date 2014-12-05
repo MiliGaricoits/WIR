@@ -210,7 +210,7 @@ nav {
 	border: 3px solid rgba(255,255,255,0.9);
 	padding: 0;
 	height: 732px;
-	width: 30.5% !important;
+	width: 28% !important;
 	background-color: rgba(255,255,255,0.9);
 	color: #525252;
 
@@ -225,7 +225,7 @@ nav {
 	overflow: hidden;
 	text-align: center;
 	position: relative;
-	width: 15%;
+	width: 13.75%;
 	height: 240px;
 	margin: 3px;
 	border: 3px solid rgba(255,255,255,0.9);
@@ -269,12 +269,12 @@ nav {
 }
 
 #container .img_peli_principal #img_ppl{
-	width: 356px;
+	width: 332px;
 	height: 482px;
 	margin-bottom: 6px;
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: 350px 482px !important;
+	background-size: 332px 482px !important;
 
 	-webkit-transition: background-image 0.7s ease-in-out;
 	-moz-transition: background-image 0.7s ease-in-out;
@@ -305,11 +305,20 @@ nav {
 	left: -200px;
 	width: auto;
 	margin-top: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
 	-webkit-transition: all 300ms ease-out;
 	-moz-transition: all 300ms ease-out;
 	-o-transition: all 300ms ease-out;
 	-ms-transition: all 300ms ease-out;	
 	transition: all 300ms ease-out;
+}
+
+#container .col-lg-2 .scale-caption h3 {
+	font-size: 15pt !important;
+} 
+#container .col-lg-2 .scale-caption p {
+	font-size: 12.5px !important;
 }
 
 #container .col-lg-2 .scale-caption h3, #desc_ppl p{
