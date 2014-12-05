@@ -12,13 +12,13 @@ $(document).ready(function(){
 	
 	$.ajax({
         type : "GET",
-        url: "http://"+server+"getPeliculas?idFacebook=1162593356",//+globales.getFacebookID(),
+        url: "http://"+server+"getPeliculasLike?idFacebook=1162593356",//+globales.getFacebookID(),
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })
     .done(function(response) {
     	console.log(response);
-    	_cargarVistas(response.peliculas);
+    	_cargarVistas(response);
     })
     .fail(function(jqXHR, textStatus) {
 

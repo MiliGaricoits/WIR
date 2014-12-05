@@ -18,7 +18,7 @@ $(document).ready(function(){
     })
     .done(function(response) {
     	console.log(response);
-    	_cargarTop10(response.peliculas);
+    	_cargarTop10(response);
     })
     .fail(function(jqXHR, textStatus) {
 
@@ -27,13 +27,13 @@ $(document).ready(function(){
 
 });
 
-function _cargarTop10(recomendados)
+function _cargarTop10(top10)
 {
 	var index = 0;
-	recomendados.forEach(function (peli) {
+	top10.forEach(function (peli) {
 
 		var new_item = '<div id="div_item_carrusel_' + index + '" class="div_item_carrusel">';
-		new_item += '<img class="img_item_carrusel" src="' + peli.urlPelicula + '">';
+		new_item += '<img class="img_item_carrusel" src="' + peli.url + '">';
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
@@ -46,12 +46,12 @@ function _cargarTop10(recomendados)
 
 	var active = $('.frame ul li.active').children();
 	active = active.data();
-	$('#top10_title').text(active.nombrePelicula);
+	$('#top10_title').text(active.nombre);
 
 	$(".div_item_carrusel").click(function(){
 
 		var peli = $(this).data();
 
-		$('#top10_title').text(peli.nombrePelicula);	
+		$('#top10_title').text(peli.nombre);	
 	});
 }

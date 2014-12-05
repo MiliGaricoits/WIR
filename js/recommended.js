@@ -1,96 +1,3 @@
-/*var pelis = [
-	{
-		id: "0", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie0.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 3,
-		like: 0	
-	},
-	{
-		id: "1", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie1.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 3,
-		like: 0	
-	},
-	{
-		id: "2", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie2.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: -1,
-		like: -1	
-	},
-	{
-		id: "3", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie3.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 1,
-		like: 0	
-	},
-	{
-		id: "1", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie1.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 3,
-		like: 0	
-	},
-	{
-		id: "2", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie2.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: -1,
-		like: -1	
-	},
-	{
-		id: "3", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie3.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 1,
-		like: 0	
-	},
-	{
-		id: "1", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie1.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 3,
-		like: 0	
-	},
-	{
-		id: "2", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie2.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: -1,
-		like: -1	
-	},
-	{
-		id: "3", 
-		titulo: "Titulo",
-		poster: "../assets/movies/movie3.jpg", 
-		description_short: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-		description_long: "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
-		rating: 1,
-		like: 0	
-	}
-];*/
-
 
 $(document).ready(function(){
 
@@ -107,17 +14,17 @@ $(document).ready(function(){
 	
 	$.ajax({
         type : "GET",
-        url: "http://"+server+"getPeliculas?idFacebook=1162593356",//+globales.getFacebookID(),
+        url: "http://"+server+"getRecomendadasUsuario?idFacebook=1162593356",//+globales.getFacebookID(),
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })
     .done(function(response) {
     	console.log(response);
-    	_cargarRecomendados(response.peliculas);
+    	_cargarRecomendados(response);
     })
     .fail(function(jqXHR, textStatus) {
 
-    	alert(jqXHR.responseText);
+    	console.log(jqXHR.responseText);
 	});
 
 });
