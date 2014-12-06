@@ -1,18 +1,21 @@
 
 $(document).ready(function(){
 
-	var globales = Globales.getInstance();
+	/*var globales = Globales.getInstance();
 	globales.setServer("localhost:15000/");
-	var server = globales.getServer();
+	var server = globales.getServer();*/
 
 	/*$("#nav_home").attr("class", '');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", '');
 	$("#nav_favorites").attr("class", 'active');*/
+
+	var server = sessionStorage.server;
+	var facebook_id = sessionStorage.facebook_id;
 	
 	$.ajax({
         type : "GET",
-        url: "http://"+server+"getPeliculasLike?idFacebook=1162593356",//+globales.getFacebookID(),
+        url: "http://"+server+"getPeliculasLike?idFacebook=" + facebook_id,
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })

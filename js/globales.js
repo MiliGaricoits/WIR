@@ -1,3 +1,5 @@
+
+
 var Globales = new function Globales(){
 	
 	var instance = this;
@@ -32,3 +34,4 @@ var Globales = new function Globales(){
 
 	return Globales;
 }
+

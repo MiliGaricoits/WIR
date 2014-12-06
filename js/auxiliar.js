@@ -1,10 +1,9 @@
 $(document).ready(function(){
 
-	var globales = Globales.getInstance();
-	globales.setServer("localhost:15000/");
-	var server = globales.getServer();
+	var server = sessionStorage.server;
+	var facebook_id = sessionStorage.facebook_id;
 
-    $('#hate_ppl').mouseover(function(){
+    /*$('#hate_ppl').mouseover(function(){
 		if ($(this).attr('class') == 'active'){
 			$(this).attr('class', '');
 			$(this).attr('src', '../assets/hate.png');
@@ -46,46 +45,101 @@ $(document).ready(function(){
 			$(this).attr('class', 'active');
 			$(this).attr('src', '../assets/love_active.png');
 		}
-	});
+	});*/
 
 	$('#hate_ppl').click(function(){
-		/*$.ajax({
-	        type : "GET",
-	        url: "http://"+server+"getPeliculas?idFacebook="+globales.getFacebookID(),
-	        contentType: 'application/x-www-form-urlencoded',
-	        dataType: 'json'
-	    })
-	    .done(function(response) {*/
-			if ($(this).attr('class') == 'active'){
-				$(this).attr('class', '');
-				$(this).attr('src', '../assets/hate.png');
-			}
-			else {
-				$(this).attr('class', 'active');
-				$(this).attr('src', '../assets/hate_active.png');
-			}
-	    //});
+
+		var data = $(this).data();
+
+		if (!data.active != 0){
+
+			$.ajax({
+		        type : "POST",
+		        url: "http://"+server+"opinarPelicula",
+	        	data:	"idFacebook=" + facebook_id
+	    				+ "&nombrePelicula=" + data.nombre
+	    				+ "&opinion=0",
+		        contentType: 'application/x-www-form-urlencoded',
+		        dataType: 'json'
+		    })
+		    .done(function(response) {
+				
+				$('#hate_ppl').attr('class', 'active');
+				$('#hate_ppl').attr('src', '../assets/hate_active.png');
+
+				$('#love_ppl').attr('class', '');
+				$('#love_ppl').attr('src', '../assets/love.png');
+
+				$('#hate_ppl').data('active', true);
+				$('#love_ppl').data('active', false);
+
+			});
+	    }
 	});
 
 	$('#love_ppl').click(function(){
-		/*$.ajax({
-	        type : "GET",
-	        url: "http://"+server+"getPeliculas?idFacebook="+globales.getFacebookID(),
-	        contentType: 'application/x-www-form-urlencoded',
-	        dataType: 'json'
-	    })
-	    .done(function(response) {*/
-			if ($(this).attr('class') == 'active'){
-				$(this).attr('class', '');
-				$(this).attr('src', '../assets/love.png');
-			}
-			else {
-				$(this).attr('class', 'active');
-				$(this).attr('src', '../assets/love_active.png');
-			}
-		//});
+
+		var data = $(this).data();
+
+		if (!data.active){
+
+			$.ajax({
+		        type : "POST",
+		        url: "http://"+server+"opinarPelicula",
+	        	data:	"idFacebook=" + facebook_id
+	    				+ "&nombrePelicula=" + data.nombre
+	    				+ "&opinion=1",
+		        contentType: 'application/x-www-form-urlencoded',
+		        dataType: 'json'
+		    })
+		    .done(function(response) {
+				
+				$('#love_ppl').attr('class', 'active');
+				$('#love_ppl').attr('src', '../assets/love_active.png');
+
+				$('#hate_ppl').attr('class', '');
+				$('#hate_ppl').attr('src', '../assets/hate.png');
+
+				$('#hate_ppl').data('active', false);
+				$('#love_ppl').data('active', true);
+
+			});
+	    }
 	});
 });
+
+function setearLike (peli) {
+
+	$('#love_ppl').data({nombre: peli.nombre, opinion: peli.opinion, active: false});
+	$('#hate_ppl').data({nombre: peli.nombre, opinion: peli.opinion, active: false});
+
+	if (peli.opinion == 0) {
+
+		$('#love_ppl').attr('class', '');
+		$('#love_ppl').attr('src', '../assets/love.png');
+
+		$('#hate_ppl').attr('class', 'active');
+		$('#hate_ppl').attr('src', '../assets/hate_active.png');
+		$('#hate_ppl').data('active', true);
+	}
+	else if (peli.opinion == 1) {
+
+		$('#hate_ppl').attr('class', '');
+		$('#hate_ppl').attr('src', '../assets/hate.png');
+
+		$('#love_ppl').attr('class', 'active');
+		$('#love_ppl').attr('src', '../assets/love_active.png');
+		$('#love_ppl').data('active', true);
+	}
+	else if (peli.opinion == -1){
+
+		$('#hate_ppl').attr('class', '');
+		$('#hate_ppl').attr('src', '../assets/hate.png');
+
+		$('#love_ppl').attr('class', '');
+		$('#love_ppl').attr('src', '../assets/love.png');
+	}
+}
 
 
 var pelis = [

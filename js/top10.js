@@ -1,18 +1,21 @@
 
 $(document).ready(function(){
 
-	var globales = Globales.getInstance();
+	/*var globales = Globales.getInstance();
 	globales.setServer("localhost:15000/");
-	var server = globales.getServer();
+	var server = globales.getServer();*/
 
 	/*$("#nav_home").attr("class", '');
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", '');
 	$("#nav_favorites").attr("class", 'active');*/
 	
+	var server = sessionStorage.server;
+	var facebook_id = sessionStorage.facebook_id;
+
 	$.ajax({
         type : "GET",
-        url: "http://"+server+"getTopTenPeliculas",
+        url: "http://"+server+"getTopTenPeliculas?idFacebook=" + facebook_id,
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })
@@ -48,10 +51,14 @@ function _cargarTop10(top10)
 	active = active.data();
 	$('#top10_title').text(active.nombre);
 
+	setearLike(active);
+
 	$(".div_item_carrusel").click(function(){
 
 		var peli = $(this).data();
 
-		$('#top10_title').text(peli.nombre);	
+		$('#top10_title').text(peli.nombre);
+
+		setearLike(peli);	
 	});
 }

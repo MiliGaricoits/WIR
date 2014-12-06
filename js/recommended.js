@@ -1,9 +1,9 @@
 
 $(document).ready(function(){
 
-	var globales = Globales.getInstance();
-	globales.setServer("localhost:15000/");
-	var server = globales.getServer();
+	//var globales = Globales.getInstance();
+	//globales.setServer("localhost:15000/");
+	//var server = globales.getServer();
 
 	//_cargarRecomendados(pelis);
 
@@ -11,10 +11,13 @@ $(document).ready(function(){
 	$("#nav_top10").attr("class", '');
 	$("#nav_recommended").attr("class", 'active');
 	$("#nav_favorites").attr("class", '');*/
+
+	var server = sessionStorage.server;
+	var facebook_id = sessionStorage.facebook_id;
 	
 	$.ajax({
         type : "GET",
-        url: "http://"+server+"getRecomendadasUsuario?idFacebook=1162593356",//+globales.getFacebookID(),
+        url: "http://"+server+"getRecomendadasUsuario?idFacebook=" + facebook_id,
         contentType: 'application/x-www-form-urlencoded',
         dataType: 'json'
     })
