@@ -132,7 +132,7 @@ header h1 {
 	-webkit-border-radius: 150px; 
 	-moz-border-radius: 150px; 
 	/*background: url(../assets/FacebookButton.png) no-repeat; */
-	background-size: 66px 66px;
+	background-size: contain !important;
 	background-position: center;
 }
 
