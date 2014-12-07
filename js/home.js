@@ -7,9 +7,6 @@ $(document).ready(function(){
 
 	var server = sessionStorage.server;
 	var facebook_id = sessionStorage.facebook_id;
-	var profile_pic = sessionStorage.profile_pic;
-
-	$('#circular').attr('background', 'url('+profile_pic+') no-repeat');
 
 	$.ajax({
         type : "GET",

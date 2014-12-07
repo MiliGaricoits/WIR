@@ -5,8 +5,6 @@ var server = '54.68.165.44:15000/';
 $(document).ready(function(){
 
 	sessionStorage.server = server
-	//var globales = new Globales();
-	//globales.setServer(server);
 
 	$('#fbLoginButton').click(function(){
 /*
@@ -29,15 +27,14 @@ $(document).ready(function(){
 				FB.api('/me', function(user) {
 					
 					userName = user.name;
-					//userName = 'lala';
 
 					FB.api(
 					    "/me/picture",
 					    {
 					        "redirect": false,
-					        "height": "200",
+					        "height": "60",
 					        "type": "normal",
-					        "width": "200"
+					        "width": "60"
 					    },
 					    function (response) {
 					      if (response && !response.error) {
@@ -78,7 +75,6 @@ $(document).ready(function(){
 
 						var idFacebook = user.id;
 						sessionStorage.facebook_id = idFacebook;
-						//userName = 'lala';
 
 						FB.api(
 						    "/me/picture",

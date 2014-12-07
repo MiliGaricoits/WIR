@@ -6,6 +6,16 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="../../css/style.css" />
         <link rel="stylesheet" href="../../font-awesome-4.2.0/css/font-awesome.min.css" />
+        <script type="text/javascript" src="../../jquery/jquery-2.1.1.min.js"></script>
+
+        <script type="text/javascript">
+        	$(document).ready(function(){
+
+				var profile_pic = sessionStorage.profile_pic;
+
+				$('#circular').css('background', 'url('+profile_pic+') no-repeat');
+			});
+        </script>
     </head>
 	<body>
 		<header>  
