@@ -40,7 +40,7 @@ function _cargarRecomendados(recomendados)
 
 		var new_item = '<div id="div_item_carrusel_' + index + '" class="div_item_carrusel">';
 		//new_item += '<img id="img_recommended" src="' + peli.poster + '">';
-		new_item += '<img class="img_item_carrusel" src="' + peli.urlPelicula + '">';
+		new_item += '<img class="img_item_carrusel" src="' + peli[4] + '">';
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
@@ -53,17 +53,17 @@ function _cargarRecomendados(recomendados)
 
 	var active = $('.frame ul li.active').children();
 	var data = active.data();
-	$('#titulo_recommended').text(data.peli.nombre);
-	$('#desc_recommended').text(data.peli.descripcion);
-	$('#likes').text(data.peli.likesPelicula + ' users like this movie');
+	$('#titulo_recommended').text(data[0]);
+	$('#desc_recommended').text(data[2]);
+	$('#likes').text(data[3] + ' users like this movie');
 
 
 	$(".div_item_carrusel").click(function(){
 
-		var peli = $(this).data().peli;
+		var peli = $(this).data();
 
-		$('#titulo_recommended').text(peli.nombre);
-		$('#desc_recommended').text(peli.descripcion);
-		$('#likes').text(peli.likesPelicula + ' users like this movie');		
+		$('#titulo_recommended').text(peli[0]);
+		$('#desc_recommended').text(peli[2]);
+		$('#likes').text(peli[3] + ' users like this movie');		
 	});
 }

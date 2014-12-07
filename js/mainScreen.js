@@ -1,6 +1,6 @@
 
-//var server = 'localhost:15000/';
-var server = '54.68.165.44:15000/';
+var server = 'localhost:15000/';
+//var server = '54.68.165.44:15000/';
 
 $(document).ready(function(){
 
@@ -10,10 +10,8 @@ $(document).ready(function(){
 
 	$('#fbLoginButton').click(function(){
 
-		//globales.setFacebookID("1162593356");
-		//globales.setFacebookID("2222222222");
-		// /sessionStorage.facebook_id = "2222222222";
-		//window.location = "views/home.html";
+		sessionStorage.facebook_id = "2222222222";
+		window.location = "views/home.html";
 		
 		FB.getLoginStatus(function(response){
 
@@ -26,7 +24,6 @@ $(document).ready(function(){
 				// the user's ID, a valid access token, a signed
 				// request, and the time the access token 
 
-				//globales.setFacebookID(idFacebook);
 				sessionStorage.facebook_id = idFacebook;
 
 				FB.api('/me', function(user) {
