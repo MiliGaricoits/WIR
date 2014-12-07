@@ -112,13 +112,30 @@ center{
 }
 
 header {
-	width: 100%;
+	margin: auto;
+	width: 1190px;
 	height: 60px;
 }
 
 header h1 {
 	margin: 0;
+	width: 100%;
+	position: absolute;
+	float: left;
 }
+
+.circular { 
+	float: right;
+	width: 60px; 
+	height: 60px; 
+	border-radius: 150px; 
+	-webkit-border-radius: 150px; 
+	-moz-border-radius: 150px; 
+	/*background: url(../assets/FacebookButton.png) no-repeat; */
+	background-size: 66px 66px;
+	background-position: center;
+}
+
 
 footer {
 	text-align: center;

@@ -1,7 +1,8 @@
 
 
 
-var server = '54.68.165.44:15000/';
+//var server = '54.68.165.44:15000/';
+var server = 'localhost:15000/';
 
 $(document).ready(function(){
 
@@ -31,8 +32,25 @@ $(document).ready(function(){
 				//sessionStorage.facebook_id = idFacebook;
 
 				FB.api('/me', function(user) {
-				
-					userName = 'lala';
+					
+					userName = user.name;
+					//userName = 'lala';
+
+					FB.api(
+					    "/me/picture",
+					    {
+					        "redirect": false,
+					        "height": "200",
+					        "type": "normal",
+					        "width": "200"
+					    },
+					    function (response) {
+					      if (response && !response.error) {
+					        
+					        sessionStorage.profile_pic = resopnse.data.url;
+					      }
+					    }
+					);
 
 					FB.api('/me/movies', function(peliculas) {
 
@@ -78,7 +96,24 @@ $(document).ready(function(){
 
 					FB.api('/me', function(user) {
 				
-						userName = 'lala';
+						userName = user.name;
+						//userName = 'lala';
+
+						FB.api(
+						    "/me/picture",
+						    {
+						        "redirect": false,
+						        "height": "200",
+						        "type": "normal",
+						        "width": "200"
+						    },
+						    function (response) {
+						      if (response && !response.error) {
+						        
+						        sessionStorage.profile_pic = resopnse.data.url;
+						      }
+						    }
+						);
 
 						FB.api('/me/movies', function(peliculas) {
 
