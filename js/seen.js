@@ -42,23 +42,21 @@ function _cargarVistas(recomendados)
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
 		$('#effects').sly('toCenter');
 
-		$('#div_item_carrusel_'+index).data({peli: peli, id: index});
+		$('#div_item_carrusel_'+index).data({peli: peli, id: '#div_item_carrusel_' + index, opinion: peli.opinion});
 
 		index++;
 	});
 
 	var active = $('.frame ul li.active').children();
-	active = active.data().peli;
-	$('#seen_title').text(active.nombre);
+	var data = active.data();
+	$('#seen_title').text(data.peli.nombre);
+	setearLike(data.peli, data.id, parseFloat(data.opinion));
 
-	setearLike(active);
 
 	$(".div_item_carrusel").click(function(){
 
-		var peli = $(this).data().peli;
-
-		$('#seen_title').text(peli.nombre);	
-
-		setearLike(peli);
+		var data = $(this).data();
+		$('#seen_title').text(data.peli.nombre);	
+		setearLike(data.peli, data.id, parseFloat(data.opinion));	
 	});
 }
