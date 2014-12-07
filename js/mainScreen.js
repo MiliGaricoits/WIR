@@ -1,6 +1,6 @@
 
-var server = 'localhost:15000/';
-//var server = '54.68.165.44:15000/';
+//var server = 'localhost:15000/';
+var server = '54.68.165.44:15000/';
 
 $(document).ready(function(){
 
@@ -9,10 +9,10 @@ $(document).ready(function(){
 	//globales.setServer(server);
 
 	$('#fbLoginButton').click(function(){
-
+/*
 		sessionStorage.facebook_id = "2222222222";
 		window.location = "views/home.html";
-		
+*/
 		FB.getLoginStatus(function(response){
 
 			if (response.status === 'connected') {
