@@ -1,6 +1,4 @@
 
-
-
 var server = '54.68.165.44:15000/';
 
 $(document).ready(function(){
@@ -33,38 +31,21 @@ $(document).ready(function(){
 				FB.api('/me', function(user) {
 				
 					userName = 'lala';
-
-					FB.api('/me/movies', function(peliculas) {
-
-						var container = $('center');
-
-						container.append('</br>');
-						container.append('</br>');
-
-						for (var i = 0; i<peliculas.data.length; i++){
-							container.append('</br>');
-							container.append(peliculas.data[i].name);
-						};
-
-						container.append('</br>');
-						console.log(peliculas);
 	
-						$.ajax({
-	                        type : "POST",
-	                        url: "http://"+server+"saveUserData",
-	                        data: "nombre="+userName+"&idFacebook="+idFacebook+"&peliculas="+peliculas.data,
-	                        contentType: 'application/x-www-form-urlencoded',
-	                        dataType: 'json'
-	                    }).done(function(response){
-	                    	console.log('done');
-	                    	window.location = "views/home.html";
+					$.ajax({
+                        type : "POST",
+                        url: "http://"+server+"saveUserData",
+                        data: "nombre="+userName+"&idFacebook="+idFacebook,
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json'
+                    }).done(function(response){
+                    	console.log('done');
+                    	window.location = "views/home.html";
 
-	                    }).fail(function(jqXHR, textStatus){
+                    }).fail(function(jqXHR, textStatus){
 
-	                    	console.log('fail');
+                    	console.log('fail');
 
-						});
-	
 					});
 
 				});
@@ -80,43 +61,26 @@ $(document).ready(function(){
 				
 						userName = 'lala';
 
-						FB.api('/me/movies', function(peliculas) {
+						$.ajax({
+	                        type : "POST",
+	                        url: "http://"+server+"saveUserData",
+	                        data: "nombre="+userName+"&idFacebook="+idFacebook,
+	                        contentType: 'application/x-www-form-urlencoded',
+	                        dataType: 'json'
+	                    }).done(function(response){
 
-							var container = $('center');
+	                    	console.log('done');
+	                    	window.location = "views/home.html";
 
-							container.append('</br>');
-							container.append('</br>');
+	                    }).fail(function(jqXHR, textStatus){
 
-							for (var i = 0; i<peliculas.data.length; i++){
-								container.append('</br>');
-								container.append(peliculas.data[i].name);
-							};
+	                    	console.log('fail');
 
-							container.append('</br>');
-							console.log(peliculas);
-		
-							$.ajax({
-		                        type : "POST",
-		                        url: "http://"+server+"saveUserData",
-		                        data: "nombre="+userName+"&idFacebook="+idFacebook+"&peliculas="+peliculas.data,
-		                        contentType: 'application/x-www-form-urlencoded',
-		                        dataType: 'json'
-		                    }).done(function(response){
-
-		                    	console.log('done');
-		                    	window.location = "views/home.html";
-
-		                    }).fail(function(jqXHR, textStatus){
-
-		                    	console.log('fail');
-
-							});
-		
 						});
 
 					});
 
-				}, {scope: 'user_likes'});
+				});
 
 			};
 
