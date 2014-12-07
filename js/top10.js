@@ -42,7 +42,7 @@ function _cargarTop10(top10)
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
 		$('#effects').sly('toCenter');
 
-		$('#div_item_carrusel_'+index).data({peli: peli, id: '#div_item_carrusel_' + index, opinion: peli.opinion});
+		$('#div_item_carrusel_'+index).data({peli: peli, id: '#div_item_carrusel_' + index, opinion: peli.opinion, likes: peli.likesPelicula});
 
 		index++;
 	});
@@ -50,13 +50,13 @@ function _cargarTop10(top10)
 	var active = $('.frame ul li.active').children();
 	var data = active.data();
 	$('#top10_title').text(data.peli.nombre);
-	setearLike(data.peli, data.id, parseFloat(data.opinion));
+	setearLike(data.peli, data.id, parseFloat(data.opinion), data.likes);
 
 
 	$(".div_item_carrusel").click(function(){
 
 		var data = $(this).data();
 		$('#top10_title').text(data.peli.nombre);
-		setearLike(data.peli, data.id, parseFloat(data.opinion));	
+		setearLike(data.peli, data.id, parseFloat(data.opinion), data.likes);	
 	});
 }

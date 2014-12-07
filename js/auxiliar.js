@@ -107,6 +107,7 @@ $(document).ready(function(){
 				$('#love_ppl').data('active', true);
 
 				$(data.id).data('opinion', 1);
+				$(data.id).data('likes', $(data.id).data().likes + 1);
 
 			});
 	    }
