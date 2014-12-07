@@ -11,8 +11,8 @@ $(document).ready(function(){
 
 		//globales.setFacebookID("1162593356");
 		//globales.setFacebookID("2222222222");
-		sessionStorage.facebook_id = "2222222222";
-		window.location = "views/home.html";
+		// /sessionStorage.facebook_id = "2222222222";
+		//window.location = "views/home.html";
 		
 		FB.getLoginStatus(function(response){
 
@@ -26,11 +26,11 @@ $(document).ready(function(){
 				// request, and the time the access token 
 
 				//globales.setFacebookID(idFacebook);
-				//sessionStorage.facebook_id = idFacebook;
+				sessionStorage.facebook_id = idFacebook;
 
 				FB.api('/me', function(user) {
 				
-					userName = 'lala';
+					userName = user.name;
 	
 					$.ajax({
                         type : "POST",
@@ -59,7 +59,9 @@ $(document).ready(function(){
 
 					FB.api('/me', function(user) {
 				
-						userName = 'lala';
+						userName = user.name;
+						var idFacebook = user.id;
+						sessionStorage.facebook_id = idFacebook;
 
 						$.ajax({
 	                        type : "POST",
