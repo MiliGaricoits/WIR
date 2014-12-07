@@ -91,7 +91,7 @@ $(document).ready(function(){
 						    function (response) {
 						      if (response && !response.error) {
 						        
-						        sessionStorage.profile_pic = resopnse.data.url;
+						        sessionStorage.profile_pic = response.data.url;
 						      }
 						    }
 						);
