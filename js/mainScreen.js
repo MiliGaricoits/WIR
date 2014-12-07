@@ -1,4 +1,5 @@
 
+//var server = 'localhost:15000/';
 var server = '54.68.165.44:15000/';
 
 $(document).ready(function(){
@@ -29,8 +30,25 @@ $(document).ready(function(){
 				sessionStorage.facebook_id = idFacebook;
 
 				FB.api('/me', function(user) {
-				
+					
 					userName = user.name;
+					//userName = 'lala';
+
+					FB.api(
+					    "/me/picture",
+					    {
+					        "redirect": false,
+					        "height": "200",
+					        "type": "normal",
+					        "width": "200"
+					    },
+					    function (response) {
+					      if (response && !response.error) {
+					        
+					        sessionStorage.profile_pic = resopnse.data.url;
+					      }
+					    }
+					);
 	
 					$.ajax({
                         type : "POST",
@@ -60,8 +78,26 @@ $(document).ready(function(){
 					FB.api('/me', function(user) {
 				
 						userName = user.name;
+
 						var idFacebook = user.id;
 						sessionStorage.facebook_id = idFacebook;
+						//userName = 'lala';
+
+						FB.api(
+						    "/me/picture",
+						    {
+						        "redirect": false,
+						        "height": "200",
+						        "type": "normal",
+						        "width": "200"
+						    },
+						    function (response) {
+						      if (response && !response.error) {
+						        
+						        sessionStorage.profile_pic = resopnse.data.url;
+						      }
+						    }
+						);
 
 						$.ajax({
 	                        type : "POST",
