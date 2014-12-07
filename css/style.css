@@ -136,6 +136,12 @@ header h1 {
 	background-position: center;
 }
 
+#username {
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
 
 footer {
 	text-align: center;

@@ -12,15 +12,19 @@
         	$(document).ready(function(){
 
 				var profile_pic = sessionStorage.profile_pic;
+				var username = sessionStorage.username;
 
 				$('#circular').css('background', 'url('+profile_pic+') no-repeat');
+				$('#username').text(username);
 			});
         </script>
     </head>
 	<body>
 		<header>  
 		    <h1>What to Watch</h1> 
-			<div id="circular" class="circular"></div>
+		    <div id="circular" class="circular"></div>
+		    <span id="username"></span>
+			
 		</header>
 	</body>
 </html>

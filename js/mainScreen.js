@@ -7,10 +7,12 @@ $(document).ready(function(){
 	sessionStorage.server = server
 
 	$('#fbLoginButton').click(function(){
-/*
-		sessionStorage.facebook_id = "2222222222";
-		window.location = "views/home.html";
-*/
+
+		/*sessionStorage.facebook_id = "2222222222";
+		sessionStorage.profile_pic = "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p200x200/1545553_10203027317981537_2039471252_n.jpg?oh=5f8078e0ff79dccbfedfa0a060d46722&oe=54FFCD67&__gda__=1427070840_cc236b1574e1f6f726685ac81e4fdbaf";
+		sessionStorage.username = "Mili Garicoits";
+		window.location = "views/home.html"; */
+
 		FB.getLoginStatus(function(response){
 
 			if (response.status === 'connected') {
@@ -27,6 +29,7 @@ $(document).ready(function(){
 				FB.api('/me', function(user) {
 					
 					userName = user.name;
+					sessionStorage.username = userName;
 
 					FB.api(
 					    "/me/picture",
@@ -72,6 +75,7 @@ $(document).ready(function(){
 					FB.api('/me', function(user) {
 				
 						userName = user.name;
+						sessionStorage.username = userName;
 
 						var idFacebook = user.id;
 						sessionStorage.facebook_id = idFacebook;
