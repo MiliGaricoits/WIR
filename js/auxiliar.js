@@ -50,8 +50,9 @@ $(document).ready(function(){
 	$('#hate_ppl').click(function(){
 
 		var data = $(this).data();
+		console.log(data);
 
-		if (!data.active != 0){
+		if (!data.active){
 
 			$.ajax({
 		        type : "POST",
@@ -72,6 +73,8 @@ $(document).ready(function(){
 
 				$('#hate_ppl').data('active', true);
 				$('#love_ppl').data('active', false);
+
+				$(data.id).data('opinion', 0);
 
 			});
 	    }
@@ -103,17 +106,19 @@ $(document).ready(function(){
 				$('#hate_ppl').data('active', false);
 				$('#love_ppl').data('active', true);
 
+				$(data.id).data('opinion', 1);
+
 			});
 	    }
 	});
 });
 
-function setearLike (peli) {
+function setearLike (peli, ident, op) {
 
-	$('#love_ppl').data({nombre: peli.nombre, opinion: peli.opinion, active: false});
-	$('#hate_ppl').data({nombre: peli.nombre, opinion: peli.opinion, active: false});
+	$('#love_ppl').data({nombre: peli.nombre, opinion: peli.opinion, active: false, id: ident});
+	$('#hate_ppl').data({nombre: peli.nombre, opinion: peli.opinion, active: false, id: ident});
 
-	if (peli.opinion == 0) {
+	if (op == 0) {
 
 		$('#love_ppl').attr('class', '');
 		$('#love_ppl').attr('src', '../assets/love.png');
@@ -121,8 +126,10 @@ function setearLike (peli) {
 		$('#hate_ppl').attr('class', 'active');
 		$('#hate_ppl').attr('src', '../assets/hate_active.png');
 		$('#hate_ppl').data('active', true);
+
+		$(ident).data('opinion', 0);
 	}
-	else if (peli.opinion == 1) {
+	else if (op == 1) {
 
 		$('#hate_ppl').attr('class', '');
 		$('#hate_ppl').attr('src', '../assets/hate.png');
@@ -130,14 +137,18 @@ function setearLike (peli) {
 		$('#love_ppl').attr('class', 'active');
 		$('#love_ppl').attr('src', '../assets/love_active.png');
 		$('#love_ppl').data('active', true);
+
+		$(ident).data('opinion', 1);
 	}
-	else if (peli.opinion == -1){
+	else if (op == -1){
 
 		$('#hate_ppl').attr('class', '');
 		$('#hate_ppl').attr('src', '../assets/hate.png');
 
 		$('#love_ppl').attr('class', '');
 		$('#love_ppl').attr('src', '../assets/love.png');
+
+		$(ident).data('opinion', -1);
 	}
 }
 

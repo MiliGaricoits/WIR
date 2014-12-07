@@ -52,18 +52,18 @@ function _cargarRecomendados(recomendados)
 	});
 
 	var active = $('.frame ul li.active').children();
-	active = active.data();
-	$('#titulo_recommended').text(active.nombrePelicula);
-	$('#desc_recommended').text(active.descripcionPelicula);
-	$('#likes').text(active.likesPelicula + ' users like this movie');
+	var data = active.data();
+	$('#titulo_recommended').text(data.peli.nombre);
+	$('#desc_recommended').text(data.peli.descripcion);
+	$('#likes').text(data.peli.likesPelicula + ' users like this movie');
 
 
 	$(".div_item_carrusel").click(function(){
 
-		var peli = $(this).data();
+		var peli = $(this).data().peli;
 
-		$('#titulo_recommended').text(peli.nombrePelicula);
-		$('#desc_recommended').text(peli.descripcionPelicula);
+		$('#titulo_recommended').text(peli.nombre);
+		$('#desc_recommended').text(peli.descripcion);
 		$('#likes').text(peli.likesPelicula + ' users like this movie');		
 	});
 }

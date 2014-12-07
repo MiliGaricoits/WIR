@@ -34,7 +34,7 @@ function _cargarContenidoPeliculas(peliculas)
 	$('#desc_ppl').text(peliculas[0].descripcion);
 	$('#likes').text(peliculas[0].likesPelicula + ' users like this movie');
 
-	setearLike(peliculas[0]);
+	setearLike(peliculas[0], '#img_peli0', peliculas[0].opinion);
 
 	var index = 0;
 	peliculas.forEach(function(peli){
@@ -47,7 +47,7 @@ function _cargarContenidoPeliculas(peliculas)
 		var peli_desc_short = $('<p></p>').text(peli.descripcion);
 		//var peli_desc_short = $('<p></p>').text(peli.description_short);
 
-		peli_small.data(peli);
+		peli_small.data({peli: peli, id: '#img_peli' + index, opinion: peli.opinion});
 	
 		img_small.appendTo(peli_small);
 		peli_title.appendTo(peli_span);
@@ -60,14 +60,17 @@ function _cargarContenidoPeliculas(peliculas)
 	});
 
 	$(".col-lg-2").click(function(){
-		var peli = $(this).data();
+		var data = $(this).data();
+		var peli = data.peli;
 
 		$('#img_ppl').css('background-image', 'url('+ peli.url +')');
 		$('#titulo_ppl').text(peli.nombre);
 		$('#desc_ppl').text(peli.descripcion);	
 		$('#likes').text(peli.likesPelicula + ' users like this movie');
 	
-		setearLike(peli);
+		setearLike(peli, data.id, data.opinion);
+
+		//console.log($(this).data());
 
 		/*var peli_id = $(this).attr('id');
 		$('#img_ppl').css('background-image', 'url('+ pelis[peli_id].poster +')');
