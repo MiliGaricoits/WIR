@@ -32,7 +32,7 @@ function _cargarContenidoPeliculas(peliculas)
 	$('#img_ppl').css('background-image', 'url('+ peliculas[0].url +')');
 	$('#titulo_ppl').text(peliculas[0].nombre);
 	$('#desc_ppl').text(peliculas[0].descripcion);
-	$('#likes').text(peliculas[0].likes + ' users like this movie');
+	$('#likes').text(peliculas[0].likesPelicula + ' users like this movie');
 
 	setearLike(peliculas[0], '#img_peli0', peliculas[0].opinion);
 
@@ -66,7 +66,7 @@ function _cargarContenidoPeliculas(peliculas)
 		$('#img_ppl').css('background-image', 'url('+ peli.url +')');
 		$('#titulo_ppl').text(peli.nombre);
 		$('#desc_ppl').text(peli.descripcion);	
-		$('#likes').text(peli.likes + ' users like this movie');
+		$('#likes').text(peli.likesPelicula + ' users like this movie');
 	
 		setearLike(peli, data.id, data.opinion);
 
