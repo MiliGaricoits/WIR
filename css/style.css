@@ -378,8 +378,8 @@ nav {
 }
 
 #likes {
-	text-align: left;
-	width: 77%;
+	text-align: center;
+	width: 100%;
 	margin-right: 10px;
 	padding-left: 3px;
 	display: inline-block;
@@ -391,11 +391,11 @@ nav {
 
 .recommended{
 	margin: 0 !important;
-	margin-left: 520px !important;
+	margin-left: 400px !important;
 }
 
 #div_descrip {
-	width: 500px;
+	width: 380px;
 	background: rgba(0,0,0,0.1);
 	height: 435px;
 	position: absolute;
