@@ -1,7 +1,7 @@
 
 
 
-var server = 'localhost:15000/';
+var server = '54.68.165.44:15000/';
 
 $(document).ready(function(){
 
