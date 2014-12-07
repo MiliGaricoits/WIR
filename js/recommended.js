@@ -56,6 +56,7 @@ function _cargarRecomendados(recomendados)
 	$('#titulo_recommended').text(data[0]);
 	$('#desc_recommended').text(data[2]);
 	$('#likes').text(data[3] + ' users like this movie');
+	$('#recomended_percentage').text(data[1] + '% that you will like this movie');
 
 
 	$(".div_item_carrusel").click(function(){
