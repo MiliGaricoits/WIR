@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 	$('#hate_ppl').click(function(){
 
-		var data = $(this).data();
+		var data = $(this).data().peli;
 
 		if (!data.active != 0){
 
@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	$('#love_ppl').click(function(){
 
-		var data = $(this).data();
+		var data = $(this).data().peli;
 
 		if (!data.active){
 

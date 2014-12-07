@@ -36,25 +36,29 @@ function _cargarVistas(recomendados)
 	recomendados.forEach(function (peli) {
 
 		var new_item = '<div id="div_item_carrusel_' + index + '" class="div_item_carrusel">';
-		new_item += '<img class="img_item_carrusel" src="' + peli.urlPelicula + '">';
+		new_item += '<img class="img_item_carrusel" src="' + peli.url + '">';
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
 		$('#effects').sly('toCenter');
 
-		$('#div_item_carrusel_'+index).data(peli);
+		$('#div_item_carrusel_'+index).data({peli: peli, id: index});
 
 		index++;
 	});
 
 	var active = $('.frame ul li.active').children();
-	active = active.data();
-	$('#seen_title').text(active.nombrePelicula);
+	active = active.data().peli;
+	$('#seen_title').text(active.nombre);
+
+	setearLike(active);
 
 	$(".div_item_carrusel").click(function(){
 
-		var peli = $(this).data();
+		var peli = $(this).data().peli;
 
-		$('#seen_title').text(peli.nombrePelicula);	
+		$('#seen_title').text(peli.nombre);	
+
+		setearLike(peli);
 	});
 }

@@ -42,20 +42,20 @@ function _cargarTop10(top10)
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
 		$('#effects').sly('toCenter');
 
-		$('#div_item_carrusel_'+index).data(peli);
+		$('#div_item_carrusel_'+index).data({peli: peli, id: index});
 
 		index++;
 	});
 
 	var active = $('.frame ul li.active').children();
-	active = active.data();
+	active = active.data().peli;
 	$('#top10_title').text(active.nombre);
 
 	setearLike(active);
 
 	$(".div_item_carrusel").click(function(){
 
-		var peli = $(this).data();
+		var peli = $(this).data().peli;
 
 		$('#top10_title').text(peli.nombre);
 

@@ -47,7 +47,7 @@ function _cargarContenidoPeliculas(peliculas)
 		var peli_desc_short = $('<p></p>').text(peli.descripcion);
 		//var peli_desc_short = $('<p></p>').text(peli.description_short);
 
-		peli_small.data(peli);
+		peli_small.data({peli: peli, id: index});
 	
 		img_small.appendTo(peli_small);
 		peli_title.appendTo(peli_span);
@@ -60,7 +60,7 @@ function _cargarContenidoPeliculas(peliculas)
 	});
 
 	$(".col-lg-2").click(function(){
-		var peli = $(this).data();
+		var peli = $(this).data().peli;
 
 		$('#img_ppl').css('background-image', 'url('+ peli.url +')');
 		$('#titulo_ppl').text(peli.nombre);
