@@ -66,9 +66,10 @@ function _cargarContenidoPeliculas(peliculas)
 		$('#img_ppl').css('background-image', 'url('+ peli.url +')');
 		$('#titulo_ppl').text(peli.nombre);
 		$('#desc_ppl').text(peli.descripcion);	
-		$('#likes').text(data.likes + ' users like this movie');
 	
 		setearLike(peli, data.id, data.opinion, data.likes);
+
+		$('#likes').text(data.likes + ' users like this movie');
 
 		//console.log($(this).data());
 

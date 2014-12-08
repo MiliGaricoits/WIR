@@ -67,7 +67,7 @@ function _cargarRecomendados(recomendados)
 		$('#titulo_recommended').text(peli[0]);
 		$('#desc_recommended').text(peli[2]);
 		$('#likes').text(peli[3] + ' users like this movie');
-		var percentage = parseFloat(data[1])*100;	
+		var percentage = parseFloat(peli[1])*100;	
 		$('#recomended_percentage').text(percentage.toFixed(2) + '% that you will like this movie');	
 	});
 }
