@@ -109,6 +109,11 @@ $(document).ready(function(){
 				$(data.id).data('opinion', 1);
 				$(data.id).data('likes', $(data.id).data().likes + 1);
 
+				if ($('#likes'))
+				{
+					$('#likes').text($(data.id).data().likes + ' users like this movie');
+				}
+
 			});
 	    }
 	});
