@@ -44,7 +44,7 @@ function _cargarRecomendados(recomendados)
 		new_item += '</div>';
 
 		$('#effects').sly('add', '<li>' + new_item + '</li>');
-		$('#effects').sly('toCenter', 1);
+		$('#effects').sly('toCenter', 0);
 
 		$('#div_item_carrusel_'+index).data(peli);
 
